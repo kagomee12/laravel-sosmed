@@ -2,37 +2,30 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-class post extends Model
+class Post extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'title',
-        'content',
-        'user_id',
-        'parent_id'
-    ];
+    protected $fillable = ['user_id', 'title', 'content'];
 
+    // Relasi ke User
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function parent()
+    // Relasi ke Comments
+    public function comments()
     {
-        return $this->hasMany(Post::class, 'parent_id');
-    }
-
-    public function children()
-    {
-        return $this->belongsTo(Post::class, 'parent_id');
+        return $this->hasMany(Comment::class);
     }
 
     public function likes()
     {
         return $this->hasMany(Like::class);
     }
+
 }
