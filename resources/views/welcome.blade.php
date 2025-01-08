@@ -20,13 +20,11 @@
         @endif
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            
+        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50"> 
             <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
                 <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                     <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
                         <div class="flex lg:justify-center lg:col-start-2">
-                           
                         </div>
                         @if (Route::has('login'))
                             <nav class="-mx-3 flex flex-1 justify-end">
@@ -57,16 +55,11 @@
                             </nav>
                         @endif
                     </header>
-
-                    <main class="mt-6">
-                        <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                            hello world
+                    <main class="mt-6 w-full h-screen">
+                        <div class="gap-6 lg:grid-cols-2 lg:gap-8 w-full h-full text-6xl justify-center items-center flex">
+                            Welcome To My App
                         </div>
                     </main>
-
-                    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                       
-                    </footer>
                 </div>
             </div>
         </div>
